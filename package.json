@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "jest --watch",
+        "test": "jest",
+        "start:test": "jest --watch",
         "start:dev": "nodemon",
         "build": "rimraf ./build && tsc",
         "start": "npm run build && node build/index.js"
