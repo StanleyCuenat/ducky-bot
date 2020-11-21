@@ -1,4 +1,4 @@
 export interface IHttpResult {
     success: boolean
-    data: undefined | { [key: string]: any }
+    data: { [key: string]: any }
 }

@@ -7,6 +7,7 @@
         "test": "jest",
         "start:test": "jest --watch",
         "start:dev": "nodemon",
+        "cover": "jest --coverage",
         "build": "rimraf ./build && tsc",
         "start": "npm run build && node build/index.js",
         "postinstall": "husky install"
