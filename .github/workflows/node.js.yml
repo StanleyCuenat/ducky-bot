@@ -19,8 +19,8 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     env:
-      CRYPTO_API_KEY: dwqddqwd
-      CRYPTO_API_SECRET: qwdqwdqwddqw
+      CRYPTO_API_KEY: ${{ secrets.CRYPTO_API_KEY }}
+      CRYPTO_API_SECRET: ${{ secrets.CRYPTO_API_SECRET }}
       CRYPTO_BASE_URL: https://uat-api.3ona.co/v2
     steps:
     - uses: actions/checkout@v2
