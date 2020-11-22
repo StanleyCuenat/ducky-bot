@@ -10,6 +10,7 @@ export async function getAccountDetail() {
     const account = await httpCall(
         '/private/get-account-summary',
         'post',
+        {},
         _body
     )
     return account.data.result.accounts as IAccountCrypto[]

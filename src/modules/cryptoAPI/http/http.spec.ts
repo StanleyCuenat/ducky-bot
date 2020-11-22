@@ -20,13 +20,13 @@ test('should return a valide API PRIVATE SECRET', () => {
 })
 
 test('should RETURN A VALID HTTP CALL WITH CRYPTO', async () => {
-    expect(await httpCall('/public/get-instruments', 'get')).toEqual(
+    expect(await httpCall('/public/get-instruments', 'get', {})).toEqual(
         expect.objectContaining({ success: true })
     )
 })
 
 test('should RETURN A INVALID HTTP CALL WITH CRYPTO', async () => {
-    expect(await httpCall('/public/wrong-uri', 'get')).toEqual(
+    expect(await httpCall('/public/wrong-uri', 'get', {})).toEqual(
         expect.objectContaining({ success: false, data: {} })
     )
 })

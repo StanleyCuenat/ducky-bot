@@ -50,6 +50,9 @@ export function getCurrentTimestamp() {
 export default async function httpCall(
     url: string,
     method: Method,
+    query: {
+        [key: string]: any
+    },
     body?: HttpBody
 ) {
     try {
@@ -57,6 +60,7 @@ export default async function httpCall(
             url: `${getBaseUrl()}${url}`,
             method: method,
             data: body !== undefined ? signRequest(body) : {},
+            params: query,
         }
         const httpResult = await Axios(config)
         return { success: true, data: httpResult.data } as IHttpResult

@@ -6,7 +6,7 @@
     "scripts": {
         "test": "jest",
         "start:test": "jest --watch",
-        "start:dev": "nodemon",
+        "start:dev": "nodemon -r dotenv/config",
         "cover": "jest --coverage",
         "build": "rimraf ./build && tsc",
         "start": "npm run build && node build/index.js",
