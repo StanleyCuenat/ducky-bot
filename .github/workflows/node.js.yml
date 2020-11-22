@@ -21,7 +21,7 @@ jobs:
     env:
       CRYPTO_API_KEY: ${{ secrets.CRYPTO_API_KEY }}
       CRYPTO_API_SECRET: ${{ secrets.CRYPTO_API_SECRET }}
-      CRYPTO_BASE_URL: https://uat-api.3ona.co/v2
+      CRYPTO_BASE_URL: https://api.crypto.com/v2
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
